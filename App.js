@@ -12,10 +12,10 @@ const Stack = createStackNavigator()
 export default function App() {
   return (
     <NavigationContainer> 
-      <Stack.Navigator initialRouteName="Welcome" >
+      <Stack.Navigator initialRouteName="GetInTouch" >
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Register" component={RegisterScreen} />
-        <Stack.Screen name="GetINTouch" component={GetInTouchScreen} />
+        <Stack.Screen name="GetInTouch" component={GetInTouchScreen} />
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
