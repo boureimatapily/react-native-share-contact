@@ -4,6 +4,7 @@ import { Text, View, StyleSheet, Image,  TouchableOpacity } from 'react-native'
 
 export default class GetInTouchScreen extends Component {
   render() {
+    const {navigation} = this.props
     return (
       <View style={styles.conatiner}>
            <Image source={require('../../assets/f3.jpg')} style={styles.image} />
@@ -12,11 +13,11 @@ export default class GetInTouchScreen extends Component {
                 <Text style={styles.text2}>Sign or Register with our Codetrain email</Text>
           </View>
           <View style={styles.access}>
-              <TouchableOpacity>
+              <TouchableOpacity  onPress={()=>{navigation.navigate('Register')}}>
                     <Text style={styles.register}>REGISTER</Text>
               </TouchableOpacity>
                 
-                <TouchableOpacity>
+                <TouchableOpacity  onPress={()=>{navigation.navigate('Login')}}>
                     <Text style={styles.login}>LOGIN</Text>
               </TouchableOpacity>
                 
