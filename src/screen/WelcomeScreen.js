@@ -30,14 +30,14 @@ export default class WelcomeScreen extends Component {
         backgroundColor:"#bbc2ba"
      },
      imageContainer:{
-            marginTop:100
+            marginTop:160
      },
      image:{
          width:300,
          height:50
      },
      contact:{
-         marginTop:150,
+         marginTop:160,
      },
      contactText:{
          fontSize:20,
@@ -45,7 +45,7 @@ export default class WelcomeScreen extends Component {
      },
      getstart:{
             marginTop:200,
-            marginBottom:50
+            marginBottom:100
      },
      getstartText:{
          fontSize:20,

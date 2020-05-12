@@ -29,8 +29,18 @@ export default function App() {
                 headerTintColor:"white"
               }}
         />
-        <Stack.Screen name="GetInTouch" component={GetInTouchScreen} />
-        <Stack.Screen name="Welcome" component={WelcomeScreen} />
+        <Stack.Screen name="GetInTouch" component={GetInTouchScreen}
+            options={{
+              headerTitle:null,
+              headerStyle:{height:60}
+            }}
+        />
+        <Stack.Screen name="Welcome" component={WelcomeScreen}
+             options={{
+              headerTitle:null,
+              headerStyle:{height:0}
+            }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
