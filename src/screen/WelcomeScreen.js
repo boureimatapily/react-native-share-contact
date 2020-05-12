@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet, Image } from 'react-native'
 
 export default class WelcomeScreen extends Component {
   render() {
     return (
       <View>
-        <Text> textInComponent </Text>
+        <Text> WELCOME </Text>
       </View>
     )
   }

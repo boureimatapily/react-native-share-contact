@@ -11,8 +11,8 @@ import WelcomeScreen from './src/screen/WelcomeScreen';
 const Stack = createStackNavigator()
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
+    <NavigationContainer> 
+      <Stack.Navigator initialRouteName="Welcome" >
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Register" component={RegisterScreen} />
         <Stack.Screen name="GetINTouch" component={GetInTouchScreen} />
