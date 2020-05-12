@@ -2,7 +2,11 @@ import React, { Component } from 'react'
 import { Text, View, StyleSheet, Image, TouchableOpacity} from 'react-native'
 
 export default class WelcomeScreen extends Component {
+    constructor(props){
+        super(props)
+    }
   render() {
+      const {navigation} = this.props
     return (
       <View style={styles.conatiner}>
         <View style={styles.imageContainer}>
@@ -13,7 +17,7 @@ export default class WelcomeScreen extends Component {
             <Text>Make your dream comes true</Text>
             
         </View>
-        <TouchableOpacity style={styles.getstart}>
+        <TouchableOpacity style={styles.getstart} onPress={()=>{navigation.navigate('GetInTouch')}}>
             <Text style={styles.getstartText}> GET STARTED</Text>
         </TouchableOpacity>
       </View>
@@ -23,7 +27,7 @@ export default class WelcomeScreen extends Component {
  const styles = StyleSheet.create({
      conatiner:{
          alignItems:"center",
-        backgroundColor:"#aaabbb"
+        backgroundColor:"#bbc2ba"
      },
      imageContainer:{
             marginTop:100
