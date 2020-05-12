@@ -46,6 +46,7 @@ export default class WelcomeScreen extends Component {
      getstartText:{
          fontSize:20,
          borderBottomWidth:1,
-         borderBottomColor:"red"
+         borderBottomColor:"red",
+         paddingBottom:5
      },
  })
