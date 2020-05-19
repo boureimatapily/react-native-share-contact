@@ -7,6 +7,7 @@ import RegisterScreen from './src/screen/RegisterScreen';
 import GetInTouchScreen from './src/screen/GetInTouchScreen';
 import WelcomeScreen from './src/screen/WelcomeScreen';
 import MenberScreen from './src/screen/MenberScreen';
+import MyProfileScreen from './src/screen/MyProfileScreen';
 
 
 const Stack = createStackNavigator()
@@ -25,6 +26,14 @@ export default function App() {
          <Stack.Screen name="Menber" component={MenberScreen}
             options={{
               headerTitle:"Menber Profile",
+              headerTitleAlign:"center",
+              headerStyle:{backgroundColor:"red"},
+              headerTintColor:"white"
+            }}
+          />
+           <Stack.Screen name="MyProfile" component={MyProfileScreen}
+            options={{
+              headerTitle:"My Profile",
               headerTitleAlign:"center",
               headerStyle:{backgroundColor:"red"},
               headerTintColor:"white"
