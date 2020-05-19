@@ -6,13 +6,14 @@ import LoginScreen from './src/screen/LoginScreen';
 import RegisterScreen from './src/screen/RegisterScreen';
 import GetInTouchScreen from './src/screen/GetInTouchScreen';
 import WelcomeScreen from './src/screen/WelcomeScreen';
+import MenberScreen from './src/screen/MenberScreen';
 
 
 const Stack = createStackNavigator()
 export default function App() {
   return (
     <NavigationContainer> 
-      <Stack.Navigator initialRouteName="Welcome" >
+      <Stack.Navigator initialRouteName="Menber" >
         <Stack.Screen name="Login" component={LoginScreen} 
             options={{
               headerTitle:"Sign In",
@@ -21,6 +22,14 @@ export default function App() {
               headerTintColor:"white"
             }}
         />
+         <Stack.Screen name="Menber" component={MenberScreen}
+            options={{
+              headerTitle:"Menber Profile",
+              headerTitleAlign:"center",
+              headerStyle:{backgroundColor:"red"},
+              headerTintColor:"white"
+            }}
+          />
         <Stack.Screen name="Register" component={RegisterScreen} 
               options={{
                 headerTitle:"Register",
