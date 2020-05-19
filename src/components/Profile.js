@@ -29,7 +29,7 @@ export class Profile extends Component {
                         <Text style={styles.email}> {this.props.email} </Text>
                     </View>
                     <View style={styles.locationContainer}>
-                        <EvilIcons name="location" size={20}/>
+                        <EvilIcons name="location" size={25}/>
                         <Text style={styles.location}> {this.props.location} </Text>
                     </View>
 
@@ -45,28 +45,34 @@ styles = StyleSheet.create({
         marginTop: 50,
         marginLeft: 20
     },
+    number:{ marginLeft:5},
+    email:{marginLeft:5},
+    location:{marginLeft:5},
     numberContainer:{
-        flexDirection:"row"
+        flexDirection:"row",
+        marginBottom:15
     },
     emailContainer:{
-        flexDirection:"row"
+        flexDirection:"row",
+        marginBottom:15
 
     },
     locationContainer:{
-        flexDirection:"row"
+        flexDirection:"row",
+        marginBottom:10
 
     },
     icons:{
         flexDirection:"row",
-        marginBottom:20
+        marginBottom:25
     },
     twit:{
         marginRight:10
     },
     image: {
-        width: 50,
-        height: 50,
-        borderRadius: 20,
+        width: 80,
+        height: 80,
+        borderRadius: 50,
         marginRight: 10
     },
     profileContainer: {
