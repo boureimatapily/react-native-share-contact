@@ -8,13 +8,15 @@ import GetInTouchScreen from './src/screen/GetInTouchScreen';
 import WelcomeScreen from './src/screen/WelcomeScreen';
 import MenberScreen from './src/screen/MenberScreen';
 import MyProfileScreen from './src/screen/MyProfileScreen';
+import QrCodeScreen from './src/screen/QrCodeScreen';
+import QrImage from './src/components/QrImage';
 
 
 const Stack = createStackNavigator()
 export default function App() {
   return (
     <NavigationContainer> 
-      <Stack.Navigator initialRouteName="Menber" >
+      <Stack.Navigator initialRouteName="QrCode" >
         <Stack.Screen name="Login" component={LoginScreen} 
             options={{
               headerTitle:"Sign In",
@@ -37,6 +39,15 @@ export default function App() {
               headerTitleAlign:"center",
               headerStyle:{backgroundColor:"red"},
               headerTintColor:"white"
+            }}
+          />
+            <Stack.Screen name="QrCode" component={QrCodeScreen}
+            options={{
+              headerTitle:"Codetrain QrCode",
+              headerTitleAlign:"center",
+              headerStyle:{backgroundColor:"red"},
+              headerTintColor:"white",
+              headerRight:()=>(<QrImage />)
             }}
           />
         <Stack.Screen name="Register" component={RegisterScreen} 
