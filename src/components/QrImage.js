@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import { Text, View, TouchableOpacity, Image, StyleSheet } from 'react-native'
 import {Feather} from '@expo/vector-icons'
-import { BarCodeScanner, Permissions } from ‘expo’;
+import { BarCodeScanner } from 'expo-barcode-scanner'
+import * as Permissions from 'expo-permissions';
+
+
 
 
 
