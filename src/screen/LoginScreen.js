@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, TextInput, TouchableOpacity, Image, ScrollView}
 
 export default class LoginScreen extends Component {
     render() {
+        const {navigation}= this.props
         return (
             <ScrollView style={styles.container}>
                     <Image source={require('../../assets/f1.jpg')} style={styles.image} />
@@ -18,7 +19,8 @@ export default class LoginScreen extends Component {
                         secureTextEntry={true} textAlign="right" />
                 </View>
 
-                <TouchableOpacity style={styles.ButtonContainer}>
+                <TouchableOpacity style={styles.ButtonContainer} 
+                onPress={() => { navigation.navigate('QrCode') }} >
                     <Text style={styles.ButtonText}>SIGN IN</Text>
                 </TouchableOpacity>
 

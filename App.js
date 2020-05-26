@@ -18,7 +18,7 @@ const Stack = createStackNavigator()
 export default function App() {
   return (
     <NavigationContainer ref={navigationRef}> 
-      <Stack.Navigator initialRouteName="Scan" >
+      <Stack.Navigator initialRouteName="Welcome" >
         <Stack.Screen name="Login" component={LoginScreen} 
             options={{
               headerTitle:"Sign In",
@@ -29,7 +29,8 @@ export default function App() {
         />
         <Stack.Screen name="Scan" component={ScanScreen} 
             options={{
-             header:null
+             headerTitle:null,
+             headerStyle:{height:0}
             }}
         />
          <Stack.Screen name="Menber" component={MenberScreen}

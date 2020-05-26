@@ -8,9 +8,9 @@ export default class QrCodeScreen extends Component {
     constructor(props) {
         super(props)
     }
-   
+
     render() {
-        const {navigation} = this.props
+        const { navigation } = this.props
 
         return (
             <View style={styles.container}>
@@ -21,7 +21,9 @@ export default class QrCodeScreen extends Component {
                     Scan this Qr bellow to share your Contact
                 </Text>
                 <View style={styles.qrplace}>
-                    <QRCode codeStyle='square' />
+                    <QRCode codeStyle='square'
+                        content="hello"
+                    />
                 </View>
                 <View style={styles.profileContainer}>
                     <Image source={require('../../assets/f3.jpg')} style={styles.image} />
@@ -31,13 +33,13 @@ export default class QrCodeScreen extends Component {
                     </View>
 
                 </View>
-                <View  style={styles.qrcode}>
+                <View style={styles.qrcode}>
                     <Text style={styles.text3}>
                         Want to add a new connection ?
                     </Text>
-                    <TouchableOpacity onPress={()=>{navigation.navigate('Scan')}}>
-                    <Text style={styles.Scantext}>
-                        Scan QR
+                    <TouchableOpacity onPress={() => { navigation.navigate('Scan') }}>
+                        <Text style={styles.Scantext}>
+                            Scan QR
                     </Text>
                     </TouchableOpacity>
 
@@ -48,47 +50,49 @@ export default class QrCodeScreen extends Component {
 }
 
 const styles = StyleSheet.create({
-    container:{
-        justifyContent:"center",
-        alignItems:"center",
-        marginTop:80
+    container: {
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 80
     },
     profileContainer: {
         flexDirection: "row",
-        marginVertical:50,
-        marginRight:100
+        marginVertical: 50,
+        marginRight: 100
     },
-    image:{
-        width:50,
-        height:50,
-        borderRadius:20,
-        marginRight:20
+    image: {
+        width: 50,
+        height: 50,
+        borderRadius: 20,
+        marginRight: 20
     },
-    name:{
-        fontWeight:"bold"
+    name: {
+        fontWeight: "bold"
     },
-    text1:{
-        fontSize:20,
-        fontWeight:"bold",
-        marginBottom:20
+    text1: {
+        fontSize: 20,
+        fontWeight: "bold",
+        marginBottom: 20
     },
-    text2:{
-        marginBottom:20,
+    text2: {
+        marginBottom: 20,
     },
-    qrcode:{
-        flexDirection:"row",
-        borderTopWidth:0.5,
-        borderBottomColor:"gray"
+    qrcode: {
+        flexDirection: "row",
+        borderTopWidth: 0.5,
+        borderBottomColor: "gray"
     },
-    text3:{
-           marginVertical:20,
-           marginRight:20
+    text3: {
+        marginVertical: 20,
+        marginRight: 20,
+
     },
-    Scantext:{
-        marginVertical:20,
-        borderWidth:1,
-        borderColor:"red",
-        paddingHorizontal:10
+    Scantext: {
+        marginVertical: 20,
+        borderWidth: 1,
+        borderColor: "red",
+        paddingHorizontal: 10,
+
     }
 
 })
