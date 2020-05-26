@@ -10,12 +10,12 @@ import MenberScreen from './src/screen/MenberScreen';
 import MyProfileScreen from './src/screen/MyProfileScreen';
 import QrCodeScreen from './src/screen/QrCodeScreen';
 import QrImage from './src/components/QrImage';
-
+import { navigationRef } from './src/components/RootNavigation';
 
 const Stack = createStackNavigator()
 export default function App() {
   return (
-    <NavigationContainer> 
+    <NavigationContainer ref={navigationRef}> 
       <Stack.Navigator initialRouteName="QrCode" >
         <Stack.Screen name="Login" component={LoginScreen} 
             options={{

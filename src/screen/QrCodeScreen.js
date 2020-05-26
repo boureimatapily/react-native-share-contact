@@ -45,6 +45,7 @@ export default class QrCodeScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+    container:{},
     profileContainer: {
         flexDirection: "row",
         alignItems: "center",
