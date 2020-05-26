@@ -11,18 +11,25 @@ import MyProfileScreen from './src/screen/MyProfileScreen';
 import QrCodeScreen from './src/screen/QrCodeScreen';
 import QrImage from './src/components/QrImage';
 import { navigationRef } from './src/components/RootNavigation';
+import ScanScreen from './src/screen/ScanScreen';
+
 
 const Stack = createStackNavigator()
 export default function App() {
   return (
     <NavigationContainer ref={navigationRef}> 
-      <Stack.Navigator initialRouteName="QrCode" >
+      <Stack.Navigator initialRouteName="Scan" >
         <Stack.Screen name="Login" component={LoginScreen} 
             options={{
               headerTitle:"Sign In",
               headerTitleAlign:"center",
               headerStyle:{backgroundColor:"red"},
               headerTintColor:"white"
+            }}
+        />
+        <Stack.Screen name="Scan" component={ScanScreen} 
+            options={{
+             header:null
             }}
         />
          <Stack.Screen name="Menber" component={MenberScreen}

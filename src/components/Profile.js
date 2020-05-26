@@ -14,7 +14,7 @@ export class Profile extends Component {
                             <Text style={styles.name}> {this.props.name} </Text>
                             <Text style={styles.post}> {this.props.post} </Text>
                         </View>
-                    </View>
+                    </View>  
                     <View style={styles.icons}>
                         <Entypo name="twitter-with-circle" size={40}  style={styles.twit} />
                         <Entypo name="linkedin-with-circle" size={40} />
@@ -60,7 +60,6 @@ styles = StyleSheet.create({
     locationContainer:{
         flexDirection:"row",
         marginBottom:10
-
     },
     icons:{
         flexDirection:"row",
